@@ -42,6 +42,10 @@ int main(int argc, char *argv[])
         }
     }
 
+    if (!strFolder.endsWith('/') && !strFolder.endsWith('\\')) {
+        strFolder += "/";
+    }
+
     {
         QDirIterator iter(strFolder, QDir::Dirs | QDir::NoDotAndDotDot);
 
